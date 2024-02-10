@@ -10,7 +10,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import Hoverable from './Hoverable';
 
 const Bio = () => (
-  <Card sx={{ display: 'flex' }}>
+  <Card sx={{ display: 'flex', marginTop: '1.75rem' }}>
     <CardMedia
       component='img'
       sx={{
