@@ -2,6 +2,18 @@
   text-align: center;
 }
 
+html, body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#root{
+  width: 60%
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -14,6 +14,17 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: '0.75rem',
     fontWeight: 'bold'
   },
+  selectorCard: {
+    display: 'flex',
+    flex: '0 1 50%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: '.125rem',
+    paddingTop: '.125rem',
+    color: 'white',
+    borderLeft: 'solid .0125rem',
+    cursor: 'pointer'
+  },
   react_native: {
     backgroundColor: '#61D8F8',
     color: 'black'
@@ -41,18 +52,31 @@ const styles: Record<string, React.CSSProperties> = {
   node: {
     backgroundColor: '#68A063',
     color: 'white'
+  },
+  downArrow: {
+    width: '0',
+    height: '0',
+    borderLeft: '20px solid transparent',
+    borderRight: '20px solid transparent',
+    borderTop: '20px solid',
+    color: 'text.secondary'
+  },
+  boxRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    textAlign: 'center',
+    backgroundColor: 'text.primary'
   }
 };
 
-const colorMap: Record<string, React.CSSProperties['color']> = {
-  react_native: 'rgb(97, 219, 251)',
-  react: '#61DBFB',
-  json_web_tokens: '#D63AFF',
-  graphql: '#F6009C',
-  mongodb: '#00ED64',
-  express: '#68A063',
-  node: '#68A063'
+const functionalStyles: Record<string, (...args: any[]) => React.CSSProperties> = {
+  active: (activeBool: boolean) => ({
+    backgroundColor: activeBool ? 'text.secondary' : 'text.primary'
+  }),
+  activeArrow: (activeBool: boolean) => ({
+    color: activeBool ? 'text.secondary' : 'white'
+  })
 };
 
-export { colorMap };
 export default styles;
+export { functionalStyles };

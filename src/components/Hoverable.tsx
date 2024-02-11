@@ -7,10 +7,11 @@ interface HoverableProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const Hoverable = (props: HoverableProps) => {
-  const { childIcon, siteLink } = props;
+  const { childIcon, siteLink, ...rest } = props;
 
   return (
     <Link
+      {...rest}
       sx={{
         '&:hover': {
           color: 'text.secondary'
