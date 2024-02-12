@@ -17,7 +17,8 @@ const ItemCard = (props: ItemCardProps) => {
         display: 'flex',
         margin: 'auto',
         border: 1,
-        boxShadow: 3
+        boxShadow: 3,
+        width: '100%'
       }}>
       <CardContent sx={styles.cardContentTest}>{props.children}</CardContent>
     </Card>
