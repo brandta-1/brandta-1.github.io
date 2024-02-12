@@ -1,6 +1,7 @@
+import { SxProps, Theme } from '@mui/material/styles';
 import React from 'react';
 
-const styles: Record<string, React.CSSProperties> = {
+const styles: Record<string, SxProps<Theme>> = {
   techBadge: {
     borderRadius: '20px',
     padding: '0.125rem 0.575rem',
@@ -8,6 +9,9 @@ const styles: Record<string, React.CSSProperties> = {
     border: '1px solid rgba(0,0,0,0.25)',
     borderStyle: 'solid',
     borderWidth: '0.1rem'
+  },
+  cardContentTest: {
+    '&:last-child': { pb: 1 }
   },
   p: {
     margin: '0',

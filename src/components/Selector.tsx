@@ -1,28 +1,46 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import styles, { functionalStyles } from '../utils/styles';
-import stats from '../utils/stats';
-const Selector = () => {
-  const [active, setActive] = useState(stats.sections[0]);
+import { Section } from '../utils/stats';
+//types dont get included in the bundle
+import { SxProps, Theme } from '@mui/material/styles';
 
+interface SelectorProps {
+  pages: Section[];
+  active: Section;
+  setActive: (val: Section) => void;
+}
+
+const Selector = (props: SelectorProps) => {
+  const { active, setActive, pages } = props;
   return (
     <Box component='nav'>
       <Box sx={styles.boxRow}>
-        {stats.sections.map((i, j) => (
+        {pages.map((i, j) => (
           <Typography
             key={j}
             onClick={() => {
               setActive(i);
             }}
-            sx={[styles.selectorCard, functionalStyles.active(active == i)]}>
-            {i}
+            sx={
+              /* see comment in Project.tsx*/
+              { ...styles.selectorCard, ...functionalStyles.active(active == i) } as SxProps<Theme>
+            }>
+            {i.replace(/_/g, ' ')}
           </Typography>
         ))}
       </Box>
-      <Box sx={[styles.boxRow, { backgroundColor: 'white', justifyContent: 'space-around' }]}>
-        {stats.sections.map((i, j) => (
-          <Box key={j} sx={[styles.downArrow, functionalStyles.activeArrow(active == i)]}></Box>
+      <Box sx={{ ...styles.boxRow, backgroundColor: 'white', justifyContent: 'space-around' }}>
+        {pages.map((i, j) => (
+          <Box
+            key={j}
+            sx={
+              {
+                ...styles.downArrow,
+                ...functionalStyles.activeArrow(active == i)
+              } as SxProps<Theme>
+            }></Box>
         ))}
       </Box>
     </Box>

@@ -8,6 +8,7 @@ html, body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  scrollbar-gutter: stable;
 }
 
 #root{
