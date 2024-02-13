@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import styles from '../utils/styles';
+
 interface CardTitleProps {
   title: string;
 }
@@ -12,7 +12,7 @@ const CardTitle = (props: CardTitleProps) => {
       color='text.primary'
       component='div'
       variant='h2'
-      sx={{ fontSize: '2rem', fontWeight: 'bold' }}>
+      sx={{ fontSize: '2rem', fontWeight: 'bold', lineHeight: '1' }}>
       {title}
     </Typography>
   );

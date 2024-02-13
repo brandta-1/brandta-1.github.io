@@ -8,14 +8,15 @@ import { ProjectItem, projects } from '../utils/stats';
 import Badge from './Badge';
 import CardTitle from './CardTitle';
 import CardDesc from './CardDesc';
+import RowStack from './RowStack';
 const ProjectCard = (props: ProjectItem) => {
   const { title, desc, skills, gitHub, siteLink } = props;
   return (
     <ItemCard>
-      <Stack direction='row' alignItems='center' sx={{ justifyContent: 'space-between' }}>
+      <RowStack>
         <CardTitle title={title} />
         <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />
-      </Stack>
+      </RowStack>
       <CardDesc desc={desc} />
       <Box>
         <CardActions sx={{ pl: 0 }}>

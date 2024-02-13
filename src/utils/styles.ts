@@ -57,6 +57,28 @@ const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: '#68A063',
     color: 'white'
   },
+
+  vba: {
+    backgroundColor: '#912697',
+    color: 'white'
+  },
+
+  postgresql: {
+    backgroundColor: '#336791',
+    color: 'white'
+  },
+  python: {
+    backgroundColor: '#3673A5',
+    color: 'white'
+  },
+  linux: {
+    backgroundColor: '#DE4815',
+    color: 'white'
+  },
+  django: {
+    backgroundColor: '#000000',
+    color: 'white'
+  },
   downArrow: {
     width: '0',
     height: '0',

@@ -16,12 +16,12 @@ const CardLinks = (props: CardLinksProps) => {
     <Box sx={{ display: 'flex', gap: '0.25rem' }}>
       <Hoverable
         title={`${title} GitHub`}
-        childIcon={<GitHubIcon sx={{ fontSize: '2rem' }} />}
+        childIcon={<GitHubIcon sx={{ fontSize: '1.5rem' }} />}
         siteLink={gitHub}
       />
       <Hoverable
         title={`Visit ${title}`}
-        childIcon={<LaunchIcon sx={{ fontSize: '2rem' }} />}
+        childIcon={<LaunchIcon sx={{ fontSize: '1.5rem' }} />}
         siteLink={siteLink}
       />
     </Box>

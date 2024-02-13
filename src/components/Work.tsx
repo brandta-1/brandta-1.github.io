@@ -1,21 +1,31 @@
 import React from 'react';
 import { WorkItem, work_history } from '../utils/stats';
 import ItemCard from './ItemCard';
-import Stack from '@mui/material/Stack';
+import RowStack from './RowStack';
 import CardTitle from './CardTitle';
 import CardLinks from './CardLinks';
 import CardDesc from './CardDesc';
 import Box from '@mui/material/Box';
 import CardActions from '@mui/material/CardActions';
 import Badge from './Badge';
+import Typography from '@mui/material/Typography';
 const WorkCard = (props: WorkItem) => {
   const { title, desc, skills, gitHub, siteLink, timeSpan } = props;
   return (
     <ItemCard>
-      <Stack direction='row' alignItems='center' sx={{ justifyContent: 'space-between' }}>
-        <CardTitle title={title} />
-        <p>{timeSpan}</p>
-      </Stack>
+      <RowStack>
+        <RowStack spacing={1}>
+          <CardTitle title={title} />
+          <Typography
+            color='text.secondary'
+            component='div'
+            variant='h3'
+            sx={{ fontSize: '1.25rem' }}>
+            {timeSpan}
+          </Typography>
+        </RowStack>
+        {gitHub && siteLink && <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />}
+      </RowStack>
       <CardDesc desc={desc} />
       <Box>
         <CardActions sx={{ pl: 0 }}>
