@@ -12,7 +12,7 @@ const Badge = (props: BadgeProps) => {
   const { skill } = props;
   const colorKey = skill.replace(/ /g, '_').toLowerCase();
   return (
-    /* an object of two spread SxProps was not resolving as type SxProps, unsure why, had to type cast */
+    /* an object of two spread SxProps isnt resolving as type SxProps, choosing to type cast instead of deep merge */
     <Box sx={{ ...styles[colorKey], ...styles.techBadge } as SxProps<Theme>}>
       <Typography sx={styles.p}>{skill}</Typography>
     </Box>

@@ -15,7 +15,7 @@ interface SelectorProps {
 const Selector = (props: SelectorProps) => {
   const { active, setActive, pages } = props;
   return (
-    <Box component='nav'>
+    <Box component='nav' sx={styles.selector}>
       <Box sx={styles.boxRow}>
         {pages.map((i, j) => (
           <Typography
@@ -24,14 +24,15 @@ const Selector = (props: SelectorProps) => {
               setActive(i);
             }}
             sx={
-              /* see comment in Project.tsx*/
+              /* see comment in Badge.tsx*/
               { ...styles.selectorCard, ...functionalStyles.active(active == i) } as SxProps<Theme>
             }>
-            {i.replace(/_/g, ' ')}
+            {/* should probably do this with JS instead of regex */}
+            {i.replace(/_/g, ' ').replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase())}
           </Typography>
         ))}
       </Box>
-      <Box sx={{ ...styles.boxRow, backgroundColor: 'white', justifyContent: 'space-around' }}>
+      <Box sx={{ ...styles.boxRow, ...styles.selectorArrows } as SxProps<Theme>}>
         {pages.map((i, j) => (
           <Box
             key={j}

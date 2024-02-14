@@ -10,17 +10,20 @@ import CardActions from '@mui/material/CardActions';
 import Badge from './Badge';
 import Typography from '@mui/material/Typography';
 const WorkCard = (props: WorkItem) => {
-  const { title, desc, skills, gitHub, siteLink, timeSpan } = props;
+  const { title, jobTitle, desc, skills, gitHub, siteLink, timeSpan } = props;
   return (
     <ItemCard>
-      <RowStack>
-        <RowStack spacing={1}>
+      <RowStack justifyContent={'space-between'}>
+        <RowStack spacing={2} alignItems={'end'}>
           <CardTitle title={title} />
           <Typography
-            color='text.secondary'
+            color='text.primary'
             component='div'
             variant='h3'
             sx={{ fontSize: '1.25rem' }}>
+            {jobTitle}
+          </Typography>
+          <Typography color='text.secondary' component='div' variant='h3' sx={{ fontSize: '1rem' }}>
             {timeSpan}
           </Typography>
         </RowStack>

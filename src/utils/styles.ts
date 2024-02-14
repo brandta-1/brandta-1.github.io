@@ -10,6 +10,26 @@ const styles: Record<string, SxProps<Theme>> = {
     borderStyle: 'solid',
     borderWidth: '0.1rem'
   },
+  bioButtons: {
+    '@media (max-width: 920px)': {
+      justifyContent: 'center'
+    }
+  },
+  bioContainer: {
+    display: 'flex',
+    margin: 'auto',
+    marginTop: '1.75rem',
+    '@media (max-width: 920px)': {
+      marginTop: '2.5rem',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
+  },
+  cardPicture: {
+    height: '230px',
+    width: '230px',
+    aspectRatio: '1 / 1'
+  },
   cardContentTest: {
     '&:last-child': { pb: 1 }
   },
@@ -17,6 +37,20 @@ const styles: Record<string, SxProps<Theme>> = {
     margin: '0',
     fontSize: '0.75rem',
     fontWeight: 'bold'
+  },
+  selector: {
+    '@media (max-width: 920px)': {
+      position: 'fixed',
+      left: '0',
+      right: '0'
+    }
+  },
+  selectorArrows: {
+    backgroundColor: 'rgba(0,0,0,0)',
+    justifyContent: 'space-around',
+    '@media (max-width: 920px)': {
+      display: 'none'
+    }
   },
   selectorCard: {
     display: 'flex',
@@ -39,6 +73,14 @@ const styles: Record<string, SxProps<Theme>> = {
   },
   json_web_tokens: {
     backgroundColor: '#D63AFF',
+    color: 'white'
+  },
+  typescript: {
+    backgroundColor: '#3178C6',
+    color: 'white'
+  },
+  mui: {
+    backgroundColor: '#0079F3',
     color: 'white'
   },
   graphql: {
@@ -79,6 +121,22 @@ const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: '#000000',
     color: 'white'
   },
+  java: {
+    backgroundColor: '#0D8AC7',
+    color: 'white'
+  },
+  sql: {
+    backgrondColor: '#ffffff',
+    color: 'black'
+  },
+  salesforce: {
+    backgroundColor: '#00A1E0',
+    color: 'white'
+  },
+  bloomberg_terminal: {
+    backgroundColor: '#000000',
+    color: 'white'
+  },
   downArrow: {
     width: '0',
     height: '0',
@@ -100,8 +158,9 @@ const functionalStyles: Record<string, (...args: any[]) => React.CSSProperties> 
     backgroundColor: activeBool ? 'text.secondary' : 'text.primary'
   }),
   activeArrow: (activeBool: boolean) => ({
-    color: activeBool ? 'text.secondary' : 'white'
-  })
+    color: activeBool ? 'text.secondary' : 'rgba(0,0,0,0)'
+  }),
+  stickySelector: (scrollBool: boolean) => ({})
 };
 
 export default styles;

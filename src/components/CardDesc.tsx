@@ -8,7 +8,11 @@ interface DescProp {
 const CardDesc = (props: DescProp) => {
   const { desc } = props;
   return (
-    <Typography color='text.secondary' component='div' variant='subtitle1' sx={{ pr: '10px' }}>
+    <Typography
+      color='text.secondary'
+      component='div'
+      variant='subtitle1'
+      sx={{ textAlign: 'justify', pr: '10px' }}>
       {desc}
     </Typography>
   );

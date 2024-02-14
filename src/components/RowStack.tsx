@@ -6,9 +6,9 @@ import Stack, { StackProps } from '@mui/material/Stack';
 type RowStackProps = Omit<StackProps, 'direction'>;
 
 const RowStack = (props: RowStackProps) => {
-  const { children, justifyContent = 'space-between', alignItems = 'end', ...rest } = props;
+  const { children, ...rest } = props;
   return (
-    <Stack {...{ ...rest, justifyContent, alignItems }} direction='row'>
+    <Stack {...{ ...rest }} direction='row'>
       {children}
     </Stack>
   );

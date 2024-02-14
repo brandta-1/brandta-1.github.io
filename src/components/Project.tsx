@@ -2,18 +2,17 @@ import React from 'react';
 import CardActions from '@mui/material/CardActions';
 import Box from '@mui/material/Box';
 import CardLinks from './CardLinks';
-import Stack from '@mui/material/Stack';
 import ItemCard from './ItemCard';
 import { ProjectItem, projects } from '../utils/stats';
 import Badge from './Badge';
 import CardTitle from './CardTitle';
 import CardDesc from './CardDesc';
 import RowStack from './RowStack';
-const ProjectCard = (props: ProjectItem) => {
+export const ProjectCard = (props: ProjectItem) => {
   const { title, desc, skills, gitHub, siteLink } = props;
   return (
     <ItemCard>
-      <RowStack>
+      <RowStack justifyContent={'space-between'}>
         <CardTitle title={title} />
         <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />
       </RowStack>
