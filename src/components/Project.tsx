@@ -7,23 +7,22 @@ import { ProjectItem, projects } from '../utils/stats';
 import Badge from './Badge';
 import CardTitle from './CardTitle';
 import CardDesc from './CardDesc';
-import RowStack from './RowStack';
+import Stack from '@mui/material/Stack';
+import styles from '../utils/styles';
 export const ProjectCard = (props: ProjectItem) => {
   const { title, desc, skills, gitHub, siteLink } = props;
   return (
     <ItemCard>
-      <RowStack justifyContent={'space-between'}>
+      <Stack justifyContent={'space-between'} direction='row'>
         <CardTitle title={title} />
-        <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />
-      </RowStack>
+        {gitHub && siteLink && <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />}
+      </Stack>
       <CardDesc desc={desc} />
-      <Box>
-        <CardActions sx={{ pl: 0 }}>
-          {skills.map((i, j) => {
-            return <Badge key={j} skill={i} />;
-          })}
-        </CardActions>
-      </Box>
+      <CardActions sx={styles.cardActions}>
+        {skills.map((i, j) => {
+          return <Badge key={j} skill={i} />;
+        })}
+      </CardActions>
     </ItemCard>
   );
 };

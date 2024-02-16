@@ -10,20 +10,14 @@ import Hoverable from './Hoverable';
 import RowStack from './RowStack';
 import Stack from '@mui/material/Stack';
 import styles from '../utils/styles';
+import TitleText from './TitleText';
 
 const Bio = () => (
   <Card sx={styles.bioContainer}>
     <CardMedia component='img' sx={styles.cardPicture} image='/images/hs.PNG' alt='My picture' />
     <Box sx={{ display: 'flex', flexDirection: 'column', padding: '.5rem' }}>
       <Stack spacing={2}>
-        <Typography
-          color='text.primary'
-          component='div'
-          variant='h1'
-          sx={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
-          Hi, I&apos;m Alex Brandt.
-        </Typography>
-
+        <TitleText text={"Hi, I'm Alex Brandt."} />
         <Typography
           color='text.secondary'
           component='div'

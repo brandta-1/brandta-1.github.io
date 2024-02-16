@@ -9,29 +9,57 @@ import Box from '@mui/material/Box';
 import CardActions from '@mui/material/CardActions';
 import Badge from './Badge';
 import Typography from '@mui/material/Typography';
+import styles from '../utils/styles';
+import Stack from '@mui/material/Stack';
 const WorkCard = (props: WorkItem) => {
   const { title, jobTitle, desc, skills, gitHub, siteLink, timeSpan } = props;
   return (
     <ItemCard>
-      <RowStack justifyContent={'space-between'}>
-        <RowStack spacing={2} alignItems={'end'}>
-          <CardTitle title={title} />
+      <Stack
+        sx={{
+          justifyContent: 'space-between',
+          flexDirection: 'row',
+          '@media (max-width: 920px)': {
+            flexDirection: 'column'
+          }
+        }}>
+        <Stack
+          sx={{
+            alignItems: 'end',
+            flexDirection: 'row',
+            gap: '.75rem',
+            '@media (max-width: 920px)': {
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '.25rem'
+            }
+          }}>
+          <CardTitle
+            title={title}
+            mediaQuery={{
+              '@media (max-width: 920px)': {
+                textAlign: 'center'
+              }
+            }}
+          />
           <Typography
             color='text.primary'
             component='div'
             variant='h3'
-            sx={{ fontSize: '1.25rem' }}>
+            sx={{
+              fontSize: '1.25rem'
+            }}>
             {jobTitle}
           </Typography>
           <Typography color='text.secondary' component='div' variant='h3' sx={{ fontSize: '1rem' }}>
             {timeSpan}
           </Typography>
-        </RowStack>
+        </Stack>
         {gitHub && siteLink && <CardLinks title={title} siteLink={siteLink} gitHub={gitHub} />}
-      </RowStack>
+      </Stack>
       <CardDesc desc={desc} />
       <Box>
-        <CardActions sx={{ pl: 0 }}>
+        <CardActions sx={styles.cardActions}>
           {skills.map((i, j) => {
             return <Badge key={j} skill={i} />;
           })}

@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Selector from './components/Selector';
 import { Section } from './utils/stats';
 import Typography from '@mui/material/Typography';
+import TitleText from './components/TitleText';
 const pages: Section[] = ['work_history', 'projects', 'about'];
 
 const WorkPage = lazy(() => import('./components/Work'));
@@ -29,13 +30,7 @@ function App() {
         width: '100%'
       }}>
       <Bio />
-      <Typography
-        color='text.primary'
-        component='div'
-        variant='h1'
-        sx={{ fontSize: '2.5rem', fontWeight: 'bold', textAlign: 'center' }}>
-        {active.replace(/_/g, ' ').replace(/(^\w{1})|(\s+\w{1})/g, (char) => char.toUpperCase())}
-      </Typography>
+      <TitleText text={active} selector={true} />
       <Selector active={active} setActive={setActive} pages={pages} />
       <Suspense fallback={null}>{React.createElement(pageMap[active])}</Suspense>
     </Box>

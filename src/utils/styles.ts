@@ -8,7 +8,18 @@ const styles: Record<string, SxProps<Theme>> = {
     height: '25%',
     border: '1px solid rgba(0,0,0,0.25)',
     borderStyle: 'solid',
-    borderWidth: '0.1rem'
+    borderWidth: '0.1rem',
+    mb: '0.5rem'
+  },
+  cardActions: {
+    pl: 0,
+    pr: 0,
+    flexWrap: 'wrap',
+    width: '97.5%',
+    '@media (max-width: 920px)': {
+      justifyContent: 'center',
+      pb: 0
+    }
   },
   bioButtons: {
     '@media (max-width: 920px)': {
@@ -38,11 +49,20 @@ const styles: Record<string, SxProps<Theme>> = {
     fontSize: '0.75rem',
     fontWeight: 'bold'
   },
+  pdf: {
+    height: '100vh',
+    width: '100%',
+    '@media (max-width: 920px)': {
+      height: '50vh'
+    }
+  },
   selector: {
     '@media (max-width: 920px)': {
       position: 'fixed',
       left: '0',
-      right: '0'
+      right: '0',
+      bottom: '0',
+      zIndex: '100'
     }
   },
   selectorArrows: {
@@ -73,7 +93,7 @@ const styles: Record<string, SxProps<Theme>> = {
   },
   json_web_tokens: {
     backgroundColor: '#D63AFF',
-    color: 'white'
+    color: 'black'
   },
   typescript: {
     backgroundColor: '#3178C6',
@@ -85,7 +105,7 @@ const styles: Record<string, SxProps<Theme>> = {
   },
   graphql: {
     backgroundColor: '#F6009C',
-    color: 'white'
+    color: 'black'
   },
   mongodb: {
     backgroundColor: '#00ED64',
@@ -133,6 +153,10 @@ const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: '#00A1E0',
     color: 'white'
   },
+  rss: {
+    backgroundColor: '#F99B39',
+    color: 'black'
+  },
   bloomberg_terminal: {
     backgroundColor: '#000000',
     color: 'white'
@@ -153,14 +177,22 @@ const styles: Record<string, SxProps<Theme>> = {
   }
 };
 
-const functionalStyles: Record<string, (...args: any[]) => React.CSSProperties> = {
+const functionalStyles: Record<string, (...args: any[]) => SxProps<Theme>> = {
   active: (activeBool: boolean) => ({
     backgroundColor: activeBool ? 'text.secondary' : 'text.primary'
   }),
   activeArrow: (activeBool: boolean) => ({
     color: activeBool ? 'text.secondary' : 'rgba(0,0,0,0)'
   }),
-  stickySelector: (scrollBool: boolean) => ({})
+  titleText: (selectorBool: boolean) => ({
+    fontSize: '2.5rem',
+    fontWeight: 'bold',
+    display: selectorBool ? 'none' : 'block',
+    '@media (max-width: 920px)': {
+      textAlign: 'center',
+      display: 'block'
+    }
+  })
 };
 
 export default styles;

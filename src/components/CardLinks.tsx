@@ -13,7 +13,7 @@ interface CardLinksProps {
 const CardLinks = (props: CardLinksProps) => {
   const { title, gitHub, siteLink } = props;
   return (
-    <Box sx={{ display: 'flex', gap: '0.25rem' }}>
+    <Box sx={{ display: 'flex', gap: '0.25rem', justifyContent: 'center' }}>
       <Hoverable
         title={`${title} GitHub`}
         childIcon={<GitHubIcon sx={{ fontSize: '1.5rem' }} />}

@@ -14,7 +14,8 @@ const ItemCard = (props: ItemCardProps) => {
   return (
     <Card
       sx={{
-        display: 'flex',
+        flex: 1,
+        flexWrap: 'wrap',
         margin: 'auto',
         border: 1,
         boxShadow: 3,
