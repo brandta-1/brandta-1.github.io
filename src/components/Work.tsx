@@ -11,7 +11,7 @@ import Badge from './Badge';
 import Typography from '@mui/material/Typography';
 import styles from '../utils/styles';
 import Stack from '@mui/material/Stack';
-const WorkCard = (props: WorkItem) => {
+export const WorkCard = (props: WorkItem) => {
   const { title, jobTitle, desc, skills, gitHub, siteLink, timeSpan } = props;
   return (
     <ItemCard>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ProjectCard } from './Project';
+import { WorkCard } from './Work';
 import { about } from '../utils/stats';
 import CardTitle from './CardTitle';
 import Typography from '@mui/material/Typography';
@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <Stack spacing={'1.75rem'}>
-        <ProjectCard {...about.meta} />
+        <WorkCard {...about.meta} />
         <Stack>
           <CardTitle title={'Work References'} />
           <Typography color='text.secondary' component='div'>

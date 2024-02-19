@@ -11,6 +11,26 @@ const styles: Record<string, SxProps<Theme>> = {
     borderWidth: '0.1rem',
     mb: '0.5rem'
   },
+  axios: {
+    backgroundColor: '#5A29E4',
+    color: 'white'
+  },
+  bootstrap: {
+    backgroundColor: '#712CF9',
+    color: 'white'
+  },
+  jest: {
+    backgroundColor: '#99425B',
+    color: 'white'
+  },
+  redux: {
+    backgroundColor: '#764ABC',
+    color: 'white'
+  },
+  jquery: {
+    backgroundColor: '#78CFF5',
+    color: 'black'
+  },
   cardActions: {
     pl: 0,
     pr: 0,
@@ -81,13 +101,22 @@ const styles: Record<string, SxProps<Theme>> = {
     paddingTop: '.125rem',
     color: 'white',
     borderLeft: 'solid .0125rem',
-    cursor: 'pointer'
+    cursor: 'pointer',
+
+    '@media (max-width: 920px)': {
+      fontSize: '1.125rem',
+      lineHeight: '2rem'
+    }
   },
   react_native: {
     backgroundColor: '#61D8F8',
     color: 'black'
   },
   react: {
+    backgroundColor: '#61D8F8',
+    color: 'black'
+  },
+  flux: {
     backgroundColor: '#61D8F8',
     color: 'black'
   },

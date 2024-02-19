@@ -10,10 +10,10 @@ export interface ProjectItem extends ContentItem {
 }
 
 export interface WorkItem extends ContentItem {
-  jobTitle: string;
+  jobTitle?: string;
   gitHub?: string;
   siteLink?: string;
-  timeSpan: string;
+  timeSpan?: string;
 }
 
 export type Section = 'work_history' | 'projects' | 'about';
@@ -43,20 +43,20 @@ export const projects: ProjectItem[] = [
 ];
 
 export const work_history: WorkItem[] = [
-  /*
   {
-    title: 'Highest Good Network',
+    title: 'One Community Global',
     jobTitle: 'Full Stack Developer',
-    desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    skills: ['React', 'Node', 'Express', 'MongoDB'],
+    desc: 'I  assist other developers and write code reviews for front end and back end pull requests via GitHub and Slack. My work involves the front end, the database, and the back end. My current contributions include full stack API debugging, repository documentation, and unit testing for React components and back end functions.',
+    skills: ['MongoDB', 'Node', 'Express', 'React', 'Jest', 'Axios', 'Bootstrap', 'Redux'],
+    gitHub: 'https://github.com/OneCommunityGlobal/HighestGoodNetworkApp/',
+    siteLink: 'https://www.onecommunityglobal.org/executive-summary/',
     timeSpan: 'Feb 2024 - Present'
   },
-  */
   {
     title: 'We Vote',
     jobTitle: 'Full Stack Developer',
-    desc: 'I solve full-stack bug tickets and issues via Jira, GitHub, and Slack. My work involves the front-end, the database, the back-end, and the database admin site. My contributions currently include updating database records, writing back-end APIs, creating and updating user interfaces for both the web application and the admin site, and providing collaborative assistance to fellow engineers.',
-    skills: ['Linux', 'React', 'PostgreSQL', 'Python', 'Django'],
+    desc: 'I solve full-stack bug tickets and issues via Jira, GitHub, and Slack. My work involves the front end, the database, the back end, and the database admin site. My contributions currently include updating database records, writing back-end APIs, creating and updating user interfaces for both the web application and the admin site, and providing collaborative assistance to fellow engineers.',
+    skills: ['Linux', 'React', 'Flux', 'jQuery', 'PostgreSQL', 'Python', 'Django'],
     gitHub: 'https://github.com/wevote/WeVoteServer',
     siteLink: 'https://wevote.us/',
     timeSpan: 'Oct 2023 - Present'
@@ -65,7 +65,7 @@ export const work_history: WorkItem[] = [
     title: 'LPL Financial',
     jobTitle: 'Associate Research Analyst',
     desc: 'I help advisors manage their practice by providing research on various financial instruments. I achieve this by using Salesforce CRM, VBA automation, Bloomberg Terminal and its Query Language, RSS feeds, and SQL. My work also includes high-net-worth account consulting, product sales, and more.',
-    skills: ['Salesforce', 'VBA', 'SQL', 'RSS', 'Bloomberg Terminal'],
+    skills: ['RSS', 'Salesforce', 'VBA', 'SQL', 'Bloomberg Terminal'],
     timeSpan: 'May 2022 - Present'
   },
   {
