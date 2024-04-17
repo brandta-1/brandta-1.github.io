@@ -166,6 +166,10 @@ const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: '#DE4815',
     color: 'white'
   },
+  mysql: {
+    backgroundColor: '#00618A',
+    color: 'white'
+  },
   django: {
     backgroundColor: '#000000',
     color: 'white'
@@ -184,6 +188,14 @@ const styles: Record<string, SxProps<Theme>> = {
   },
   rss: {
     backgroundColor: '#F99B39',
+    color: 'black'
+  },
+  spring_boot: {
+    backgroundColor: '#6CB52D',
+    color: 'white'
+  },
+  hibernate: {
+    backgroundColor: '#BCAE79',
     color: 'black'
   },
   bloomberg_terminal: {

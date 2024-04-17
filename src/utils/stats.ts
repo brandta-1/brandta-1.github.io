@@ -20,6 +20,13 @@ export type Section = 'work_history' | 'projects' | 'about';
 
 export const projects: ProjectItem[] = [
   {
+    title: 'CS2 Container Tool (WIP)',
+    desc: 'Webpage that displays the Return On Investment (ROI) for CS2 containers. The back end runs on Spring Boot, and is used to transform the float distributions for CS2, so they can be partitioned for ROI calculation. The front end displays the data with TypeScript and React, as well as third-party news via RSS.',
+    skills: ['React', 'TypeScript', 'MUI', 'RSS', 'Hibernate', 'MySQL', 'Spring Boot', 'Java'],
+    gitHub: 'https://github.com/brandta-1/case-evaluator',
+    siteLink: 'https://github.com/brandta-1/case-evaluator-front-end'
+  },
+  {
     title: "Trader's Guild",
     desc: 'Web-based solution for item trading in Dark and Darker. This site uses JSON Web Tokens for authentication, and allows users to search and upload items into a MongoDB database via a GraphQL API. The front end client uses Apollo, and the back end runs on Node.',
     skills: ['MongoDB', 'Express', 'Node', 'React Native', 'JSON Web Tokens', 'GraphQL'],
