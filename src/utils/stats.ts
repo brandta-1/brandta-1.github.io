@@ -22,9 +22,19 @@ export const projects: ProjectItem[] = [
   {
     title: 'CS2 Container Tool (WIP)',
     desc: 'Webpage that displays the Return On Investment (ROI) for CS2 containers. The back end runs on Spring Boot, and is used to transform the float distributions for CS2, so they can be partitioned for ROI calculation. The front end displays the data with TypeScript and React, as well as third-party news via RSS.',
-    skills: ['React', 'TypeScript', 'MUI', 'RSS', 'Hibernate', 'MySQL', 'Spring Boot', 'Java'],
+    skills: [
+      'Hibernate',
+      'RSS',
+      'Spring Boot',
+      'React',
+      'Java',
+      'MUI',
+      'TypeScript',
+      'MySQL',
+      'Redux'
+    ],
     gitHub: 'https://github.com/brandta-1/case-evaluator',
-    siteLink: 'https://github.com/brandta-1/case-evaluator-front-end'
+    siteLink: 'https://github.com/brandta-1/case-evaluator-front-end-redux'
   },
   {
     title: "Trader's Guild",
@@ -53,7 +63,7 @@ export const work_history: WorkItem[] = [
   {
     title: 'One Community Global',
     jobTitle: 'Full Stack Developer',
-    desc: 'I  assist other developers and write code reviews for front end and back end pull requests via GitHub and Slack. My work involves the front end, the database, and the back end. My current contributions include full stack API debugging, repository documentation, and unit testing for React components and back end functions.',
+    desc: 'I write full-stack features and assist other developers via code reviews. My contributions include full-stack API debugging, an API that allows users to summarize their weekly work via ChatGPT, repository documentation, and unit testing for React-Redux components and back-end functions.',
     skills: ['MongoDB', 'Node', 'Express', 'React', 'Jest', 'Axios', 'Bootstrap', 'Redux'],
     gitHub: 'https://github.com/OneCommunityGlobal/HighestGoodNetworkApp/',
     siteLink: 'https://www.onecommunityglobal.org/executive-summary/',
