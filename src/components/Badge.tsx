@@ -10,7 +10,7 @@ interface BadgeProps {
 
 const Badge = (props: BadgeProps) => {
   const { skill } = props;
-  const colorKey = skill.replace(/ /g, '_').toLowerCase();
+  const colorKey = skill.replace(/ /g, '_').toLowerCase().replace('#', 'sharp');
   return (
     /* an object of two spread SxProps isnt resolving as type SxProps, choosing to type cast instead of deep merge */
     <Box sx={{ ...styles[colorKey], ...styles.techBadge } as SxProps<Theme>}>

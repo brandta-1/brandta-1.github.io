@@ -153,7 +153,22 @@ const styles: Record<string, SxProps<Theme>> = {
     backgroundColor: '#912697',
     color: 'white'
   },
-
+  redis: {
+    backgroundColor: '#DC382D',
+    color: 'white'
+  },
+  docker: {
+    backgroundColor: '#2496ED',
+    color: 'white'
+  },
+  kubernetes: {
+    backgroundColor: '#326CE5',
+    color: 'white'
+  },
+  csharp: {
+    backgroundColor: '#68217A',
+    color: 'white'
+  },
   postgresql: {
     backgroundColor: '#336791',
     color: 'white'

@@ -30,7 +30,7 @@ const About = () => {
               aria-controls='panel-content'
               sx={{ color: 'text.secondary' }}
               expandIcon={<ExpandMoreIcon />}>
-              {`Click to ${open ? 'close' : 'view'}`}
+              {open ? 'Click to close' : 'Click to view'}
             </AccordionSummary>
             <AccordionDetails sx={styles.pdf}>
               <iframe

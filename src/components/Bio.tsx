@@ -25,8 +25,9 @@ const Bio = () => (
           sx={{ fontSize: '1.2rem', textAlign: 'justify' }}>
           I graduated from the University of South Carolina with a Bachelor&apos;s Degree in
           Statistics. My professional background includes technology, business, software, and data.
-          I offer a multifaceted profile with a mix of technical and interpersonal skills, and this
-          site provides a snapshot of my work.
+          I offer a multifaceted professional profile, with a mix of technical and interpersonal
+          skills, while specializing in statistical computing for financial and geospatial data.
+          This site provides a snapshot of my work.
         </Typography>
         <RowStack sx={styles.bioButtons}>
           <Hoverable
